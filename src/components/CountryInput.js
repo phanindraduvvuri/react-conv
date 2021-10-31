@@ -1,12 +1,13 @@
 import React from "react";
 
-const CountryInput = () => {
+const CountryInput = ({ onChangeCurrency, selected, currencyOptions }) => {
   return (
-    <select>
-      <option value="INR">INR</option>
-      <option value="USD">USD</option>
-      <option value="EUR">EUR</option>
-      <option value="YEN">YEN</option>
+    <select value={selected} onChange={onChangeCurrency}>
+      {currencyOptions.map((option) => (
+        <option key={option} value={option}>
+          {option}
+        </option>
+      ))}
     </select>
   );
 };

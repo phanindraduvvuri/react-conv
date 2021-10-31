@@ -2,12 +2,12 @@ import React from "react";
 
 import CountryInput from "./CountryInput";
 
-const CountryRow = () => {
+const CountryRow = ({ selected, currencyOptions }) => {
   return (
     <div className="countryRow">
-      <CountryInput />
-      <p>To</p>
-      <CountryInput />
+      <CountryInput selected={"INR"} currencyOptions={currencyOptions} />
+      <p>To {}</p>
+      <CountryInput selected={"EUR"} currencyOptions={currencyOptions} />
     </div>
   );
 };
